@@ -1,0 +1,8 @@
+*.log*
+.cache/
+.env*
+.eslintcache
+coverage/
+node_modules/
+public/
+.vscode/
