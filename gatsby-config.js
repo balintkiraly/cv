@@ -3,6 +3,7 @@ const siteMetadata = {
   description:
     'Demo for a Gatsby starter with strict linting and auto-formatting rules.',
   email: 'balint.kiraly@protonmail.com',
+  githubUsername: 'balintkiraly',
 };
 
 module.exports = {

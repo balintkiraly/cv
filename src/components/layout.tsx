@@ -3,13 +3,25 @@ import {
   Button,
   ColorModeProvider,
   Flex,
+  IconButton,
   Image,
-  Link,
   Text,
 } from '@chakra-ui/core';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import {
+  FaDribbbleSquare,
+  FaEnvelope,
+  FaEnvelopeSquare,
+  FaFacebook,
+  FaFacebookSquare,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaMailBulk,
+  FaRedditSquare,
+} from 'react-icons/fa';
 
 import { Container } from './container';
 import { NavBar } from './nav-bar';
@@ -26,6 +38,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
           name
           description
           email
+          githubUsername
         }
       }
     }
@@ -48,8 +61,8 @@ export function Layout({ children }: LayoutProps): JSX.Element {
 
         <Container>
           <Flex flexDirection={['column', 'column', 'row']}>
-            <Flex flexDirection={['row', 'row', 'column']} pr={6}>
-              <Box size={['120px', '220px', '280px']} px={[2, 2, 0]}>
+            <Flex flexDirection={['column', 'row', 'column']} pr={[0, 6]}>
+              <Box size={['100%', '220px', '280px']} px={[1, 2, 0]}>
                 <Image
                   src="https://avatars2.githubusercontent.com/u/3306242?s=460&u=022fffa2f9b9c77b23506c3a5f92bccf6e8d6ac3&v=4"
                   borderRadius={4}
@@ -57,23 +70,54 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                   w="100%"
                 />
               </Box>
-              <Flex flexDirection="column" alignItems="justifyContent">
-                <Text px={[2, 2, 0]} py={[0, 0, 4]} fontSize="3xl">
+              <Flex
+                flexDirection="column"
+                alignItems="justifyContent"
+                px={[2, 2, 0]}
+              >
+                <Text pt={[0, 0, 4]} fontSize="3xl">
                   Bálint Király
                 </Text>
+                <Text color="gray.500" pb={4}>
+                  {data.site.siteMetadata.email}
+                </Text>
                 <Button
-                  as="a"
                   border="1px"
-                  m={2}
-                  href={`mailto:${data.site.siteMetadata.email}`}
                   borderColor="gray.300"
                   size="sm"
+                  my={2}
+                  as="a"
+                  href={`https://github.com/${data.site.siteMetadata.githubUsername}`}
                 >
-                  Contact
+                  View GitHub profile
                 </Button>
+                <Text fontSize="xl" my={2}>
+                  Contact
+                </Text>
+                <Flex justifyContent="space-between">
+                  <Box
+                    as={FaFacebookSquare}
+                    size="32px"
+                    color="gray.600"
+                    mx={3}
+                  />
+                  <Box
+                    as={FaDribbbleSquare}
+                    size="32px"
+                    color="gray.600"
+                    mx={3}
+                  />
+                  <Box as={FaLinkedin} size="32px" color="gray.600" mx={3} />
+                  <Box
+                    as={FaEnvelopeSquare}
+                    size="32px"
+                    color="gray.600"
+                    mx={3}
+                  />
+                </Flex>
               </Flex>
             </Flex>
-            <Box px={5} size="100%">
+            <Box px={[1, 5]} size="100%" pt={[4, 0]}>
               {children}
             </Box>
           </Flex>
