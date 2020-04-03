@@ -8,6 +8,21 @@ module.exports = {
   pathPrefix: '/cv',
   siteMetadata,
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `educations`,
+        path: `${__dirname}/src/content/educations`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `experiences`,
+        path: `${__dirname}/src/content/experiences`,
+      },
+    },
+    `gatsby-transformer-remark`,
     'gatsby-plugin-chakra-ui',
     'gatsby-plugin-emotion',
     {
