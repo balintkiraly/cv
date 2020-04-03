@@ -1,4 +1,12 @@
-import { Box, Button, ColorModeProvider,Flex, Image, Text  } from '@chakra-ui/core';
+import {
+  Box,
+  Button,
+  ColorModeProvider,
+  Flex,
+  Image,
+  Link,
+  Text,
+} from '@chakra-ui/core';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
@@ -17,6 +25,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         siteMetadata {
           name
           description
+          email
         }
       }
     }
@@ -52,7 +61,14 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                 <Text px={[2, 2, 0]} py={[0, 0, 4]} fontSize="3xl">
                   Bálint Király
                 </Text>
-                <Button border="1px" borderColor="gray.300" size="sm">
+                <Button
+                  as="a"
+                  border="1px"
+                  m={2}
+                  href={`mailto:${data.site.siteMetadata.email}`}
+                  borderColor="gray.300"
+                  size="sm"
+                >
                   Contact
                 </Button>
               </Flex>
