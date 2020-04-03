@@ -42,14 +42,16 @@ export default function IndexPage({ data }: any): JSX.Element {
                 borderBottomColor="gray.200"
                 py={4}
               >
-                <Text fontSize="xl" color="blue.500">
+                <Text fontSize="xl" color="blue.500" fontWeight="bold" pb={2}>
                   {node.childMarkdownRemark.frontmatter.title}
                 </Text>
-                <Text>
+                <Text fontSize="xs" color="gray.600">
+                  {node.childMarkdownRemark.excerpt}
+                </Text>
+                <Text fontSize="xs" pt={1} color="gray.600">
                   {node.childMarkdownRemark.frontmatter.startDate} -{' '}
                   {node.childMarkdownRemark.frontmatter.endDate}
                 </Text>
-                <Text>{node.childMarkdownRemark.excerpt}</Text>
               </Box>
             ))}
           </TabPanel>
@@ -61,19 +63,26 @@ export default function IndexPage({ data }: any): JSX.Element {
                 borderBottomColor="gray.200"
                 py={4}
               >
-                <Text fontSize="xl" color="blue.500">
+                <Text fontSize="xl" color="blue.500" fontWeight="bold" pb={2}>
                   {node.childMarkdownRemark.frontmatter.title}
                 </Text>
-                <Text>
-                  {node.childMarkdownRemark.frontmatter.startDate} -{' '}
-                  {node.childMarkdownRemark.frontmatter.endDate}
+                <Text fontSize="xs" color="gray.600">
+                  {node.childMarkdownRemark.excerpt}
                 </Text>
-                <Text>{node.childMarkdownRemark.excerpt}</Text>
+                <Text fontSize="xs" pt={1} color="gray.600">
+                  {node.childMarkdownRemark.frontmatter.startDate} -{' '}
+                  {node.childMarkdownRemark.frontmatter.endDate && ' '}
+                </Text>
 
                 <Flex flexDirection="row" mt={3}>
                   {node.childMarkdownRemark.frontmatter.technologies.map(
                     (technology) => (
-                      <Flex flexDirection="row" alignItems="center">
+                      <Flex
+                        flexDirection="row"
+                        alignItems="center"
+                        fontSize="xs"
+                        color="gray.600"
+                      >
                         <Box
                           bg={technology.color}
                           mr={1}
