@@ -1,9 +1,10 @@
+import { Box, Button,Flex, Image, Text } from '@chakra-ui/core';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { NavBar } from './nav-bar';
-import { Box, Flex, Image, Text, Button } from '@chakra-ui/core';
+
 import { Container } from './container';
+import { NavBar } from './nav-bar';
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -37,7 +38,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
           <Flex flexDirection={['row', 'row', 'column']} pr={6}>
             <Box size={['120px', '220px', '280px']} px={[2, 2, 0]}>
               <Image
-                src="https://placehold.it/420x420"
+                src="https://avatars2.githubusercontent.com/u/3306242?s=460&u=022fffa2f9b9c77b23506c3a5f92bccf6e8d6ac3&v=4"
                 borderRadius={4}
                 objectFit="cover"
                 w="100%"
@@ -45,7 +46,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
             </Box>
             <Flex flexDirection="column" alignItems="justifyContent">
               <Text px={[2, 2, 0]} py={[0, 0, 4]} fontSize="3xl">
-                Balint Kiraly
+                Bálint Király
               </Text>
               <Button border="1px" borderColor="gray.300" size="sm">
                 Contact
