@@ -5,7 +5,7 @@ const siteMetadata = {
 };
 
 module.exports = {
-  pathPrefix: '/cv',
+  pathPrefix: '',
   siteMetadata,
   plugins: [
     'gatsby-plugin-chakra-ui',
