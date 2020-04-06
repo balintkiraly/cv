@@ -1,7 +1,11 @@
 {
   "root": true,
-  "env": { "browser": true },
-  "parserOptions": { "project": "./tsconfig.json" },
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": [
     "airbnb-typescript",
     "airbnb/hooks",
@@ -15,15 +19,13 @@
     "prettier/react"
   ],
   "plugins": ["simple-import-sort"],
-
   "rules": {
     // Auto-sort imports
     "sort-imports": "off",
     "import/order": "off",
     "simple-import-sort/sort": "error",
     "import/prefer-default-export": "off",
-    "import/no-default-export": "error",
-
+    "import/no-default-export": "warn",
     // Using a type system makes it safe enough to spread props
     "react/jsx-props-no-spreading": "off"
   }

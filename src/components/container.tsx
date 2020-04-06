@@ -1,7 +1,12 @@
 import { Flex, FlexProps } from '@chakra-ui/core';
 import React, { FC } from 'react';
 
-export const Container: FC<FlexProps> = ({ children, ...rest }) => {
+type ContainerProps = FlexProps & {
+
+  children: React.ReactNode;
+}
+
+export const Container: FC<ContainerProps> = ({ children, ...rest }: ContainerProps) => {
   return (
     <Flex
       flexDirection="column"
