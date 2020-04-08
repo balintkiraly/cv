@@ -3,26 +3,14 @@ import {
   Button,
   ColorModeProvider,
   Flex,
-  IconButton,
   Image,
   Text,
 } from '@chakra-ui/core';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import {
-  FaDribbbleSquare,
-  FaEnvelope,
-  FaEnvelopeSquare,
-  FaFacebook,
-  FaFacebookSquare,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaMailBulk,
-  FaRedditSquare,
-} from 'react-icons/fa';
 
+import { Contact } from './contact';
 import { Container } from './container';
 import { NavBar } from './nav-bar';
 
@@ -37,8 +25,13 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         siteMetadata {
           name
           description
-          email
-          githubUsername
+          contact {
+            email
+            github
+            linkedin
+            facebook
+            location
+          }
         }
       }
     }
@@ -79,7 +72,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                   Bálint Király
                 </Text>
                 <Text color="gray.500" pb={4}>
-                  {data.site.siteMetadata.email}
+                  {data.site.siteMetadata.contact.email}
                 </Text>
                 <Button
                   border="1px"
@@ -87,34 +80,11 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                   size="sm"
                   my={2}
                   as="a"
-                  href={`https://github.com/${data.site.siteMetadata.githubUsername}`}
+                  href={`https://github.com/${data.site.siteMetadata.contact.github}`}
                 >
                   View GitHub profile
                 </Button>
-                <Text fontSize="xl" my={2}>
-                  Contact
-                </Text>
-                <Flex justifyContent="space-between">
-                  <Box
-                    as={FaFacebookSquare}
-                    size="32px"
-                    color="gray.600"
-                    mx={3}
-                  />
-                  <Box
-                    as={FaDribbbleSquare}
-                    size="32px"
-                    color="gray.600"
-                    mx={3}
-                  />
-                  <Box as={FaLinkedin} size="32px" color="gray.600" mx={3} />
-                  <Box
-                    as={FaEnvelopeSquare}
-                    size="32px"
-                    color="gray.600"
-                    mx={3}
-                  />
-                </Flex>
+                <Contact {...data.site.siteMetadata.contact} />
               </Flex>
             </Flex>
             <Box px={[1, 5]} size="100%" pt={[4, 0]}>
