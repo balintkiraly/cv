@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Link, Text } from '@chakra-ui/core';
+import { Box, Flex, Link, Text } from '@chakra-ui/core';
 import React from 'react';
 import {
   FaEnvelopeSquare,

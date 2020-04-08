@@ -12,6 +12,7 @@ import {
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import { EducationCard } from '../components/educationCard';
 import { Layout } from '../components/layout';
 
 export default function IndexPage({ data }: any): JSX.Element {
@@ -36,26 +37,14 @@ export default function IndexPage({ data }: any): JSX.Element {
         <TabPanels mt={5}>
           <TabPanel>
             {data.educations.edges.map(({ node }) => (
-              <Box
+              <EducationCard
                 key={node.id}
-                borderBottomWidth="1px"
-                borderBottomColor="gray.200"
-                py={4}
-              >
-                <Text fontSize="xl" color="blue.500" fontWeight="bold">
-                  {node.childMarkdownRemark.frontmatter.title}
-                </Text>
-                <Text fontSize="md" color="gray.500" fontWeight="bolder" pb={2}>
-                  {node.childMarkdownRemark.frontmatter.institute}
-                </Text>
-                <Text fontSize="xs" color="gray.600">
-                  {node.childMarkdownRemark.excerpt}
-                </Text>
-                <Text fontSize="xs" pt={1} color="gray.600">
-                  {node.childMarkdownRemark.frontmatter.startDate} -{' '}
-                  {node.childMarkdownRemark.frontmatter.endDate}
-                </Text>
-              </Box>
+                title={node.childMarkdownRemark.frontmatter.title}
+                institute={node.childMarkdownRemark.frontmatter.institute}
+                startDate={node.childMarkdownRemark.frontmatter.startDate}
+                endDate={node.childMarkdownRemark.frontmatter.endDate}
+                description={node.childMarkdownRemark.frontmatter.excerpt}
+              />
             ))}
           </TabPanel>
           <TabPanel>
