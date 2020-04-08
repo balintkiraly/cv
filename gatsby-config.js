@@ -1,7 +1,14 @@
 const siteMetadata = {
-  name: 'Gatsby Strict Starter',
+  name: 'Gatsby Strict ',
   description:
     'Demo for a Gatsby starter with strict linting and auto-formatting rules.',
+  contact: {
+    email: 'balint.kiraly@protonmail.com',
+    github: 'balintkiraly',
+    linkedin: 'kiralybalint',
+    facebook: 'balintkiralyfb',
+    location: 'Budapest, Hungary',
+  },
 };
 
 module.exports = {

@@ -1,8 +1,16 @@
-import { Box, Button, ColorModeProvider,Flex, Image, Text  } from '@chakra-ui/core';
+import {
+  Box,
+  Button,
+  ColorModeProvider,
+  Flex,
+  Image,
+  Text,
+} from '@chakra-ui/core';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { Contact } from './contact';
 import { Container } from './container';
 import { NavBar } from './nav-bar';
 
@@ -17,6 +25,13 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         siteMetadata {
           name
           description
+          contact {
+            email
+            github
+            linkedin
+            facebook
+            location
+          }
         }
       }
     }
@@ -39,8 +54,8 @@ export function Layout({ children }: LayoutProps): JSX.Element {
 
         <Container>
           <Flex flexDirection={['column', 'column', 'row']}>
-            <Flex flexDirection={['row', 'row', 'column']} pr={6}>
-              <Box size={['120px', '220px', '280px']} px={[2, 2, 0]}>
+            <Flex flexDirection={['column', 'row', 'column']} pr={[0, 6]}>
+              <Box size={['100%', '220px', '280px']} px={[1, 2, 0]}>
                 <Image
                   src="https://avatars2.githubusercontent.com/u/3306242?s=460&u=022fffa2f9b9c77b23506c3a5f92bccf6e8d6ac3&v=4"
                   borderRadius={4}
@@ -48,16 +63,31 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                   w="100%"
                 />
               </Box>
-              <Flex flexDirection="column" alignItems="justifyContent">
-                <Text px={[2, 2, 0]} py={[0, 0, 4]} fontSize="3xl">
+              <Flex
+                flexDirection="column"
+                alignItems="justifyContent"
+                px={[2, 2, 0]}
+              >
+                <Text pt={[0, 0, 4]} fontSize="3xl">
                   Bálint Király
                 </Text>
-                <Button border="1px" borderColor="gray.300" size="sm">
-                  Contact
+                <Text color="gray.500" pb={4}>
+                  {data.site.siteMetadata.contact.email}
+                </Text>
+                <Button
+                  border="1px"
+                  borderColor="gray.300"
+                  size="sm"
+                  my={2}
+                  as="a"
+                  href={`https://github.com/${data.site.siteMetadata.contact.github}`}
+                >
+                  View GitHub profile
                 </Button>
+                <Contact {...data.site.siteMetadata.contact} />
               </Flex>
             </Flex>
-            <Box px={5} size="100%">
+            <Box px={[1, 5]} size="100%" pt={[4, 0]}>
               {children}
             </Box>
           </Flex>
