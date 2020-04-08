@@ -42,8 +42,11 @@ export default function IndexPage({ data }: any): JSX.Element {
                 borderBottomColor="gray.200"
                 py={4}
               >
-                <Text fontSize="xl" color="blue.500" fontWeight="bold" pb={2}>
+                <Text fontSize="xl" color="blue.500" fontWeight="bold">
                   {node.childMarkdownRemark.frontmatter.title}
+                </Text>
+                <Text fontSize="md" color="gray.500" fontWeight="bolder" pb={2}>
+                  {node.childMarkdownRemark.frontmatter.institute}
                 </Text>
                 <Text fontSize="xs" color="gray.600">
                   {node.childMarkdownRemark.excerpt}
@@ -71,7 +74,7 @@ export default function IndexPage({ data }: any): JSX.Element {
                 </Text>
                 <Text fontSize="xs" pt={1} color="gray.600">
                   {node.childMarkdownRemark.frontmatter.startDate} -{' '}
-                  {node.childMarkdownRemark.frontmatter.endDate && ' '}
+                  {node.childMarkdownRemark.frontmatter.endDate}
                 </Text>
 
                 <Flex flexDirection="row" mt={3}>
@@ -122,6 +125,7 @@ export const query = graphql`
             id
             frontmatter {
               title
+              institute
               startDate(formatString: "DD MMMM, YYYY")
               endDate(formatString: "DD MMMM, YYYY")
             }
