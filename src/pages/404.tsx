@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { Layout } from '../components/layout';
 
+// eslint-disable-next-line import/no-default-export
 export default function NotFoundPage(): JSX.Element {
   return (
     <Layout>

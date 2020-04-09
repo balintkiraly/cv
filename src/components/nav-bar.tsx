@@ -1,16 +1,14 @@
 import {
   Box,
-  Button,
   Flex,
   IconButton,
   Image,
-  Link,
   Text,
   useColorMode,
 } from '@chakra-ui/core';
 import React from 'react';
 
-export const NavBar = () => {
+export const NavBar = (): JSX.Element => {
   const { colorMode, toggleColorMode } = useColorMode();
   let colorModeButton;
   if (colorMode === 'light') {
