@@ -10,6 +10,7 @@ export const DataRange = ({
   endDate,
 }: DataRangeProps): JSX.Element => (
   <Text fontSize="xs" pt={1} color="gray.600">
-    {startDate} - {endDate}
+    {startDate !== 'Invalid date' && startDate} -{' '}
+    {endDate !== 'Invalid date' && endDate}
   </Text>
 );
