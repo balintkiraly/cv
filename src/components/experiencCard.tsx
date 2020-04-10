@@ -2,6 +2,7 @@ import { Box, Flex, Text } from '@chakra-ui/core';
 import React from 'react';
 
 import { DataRange } from './dataRange';
+import { TechnologyLabel } from './technologyLabel';
 
 interface ExperiencCardProps {
   title: string;
@@ -30,24 +31,9 @@ export const ExperiencCard = ({
     </Text>
     <DataRange startDate={startDate} endDate={endDate} />
 
-    <Flex flexDirection="row" mt={3}>
-      {technologies.map((technology: { color: string; name: string }) => (
-        <Flex
-          flexDirection="row"
-          alignItems="center"
-          fontSize="xs"
-          color="gray.600"
-        >
-          <Box
-            bg={technology.color}
-            mr={1}
-            p={1}
-            rounded={10}
-            w="14px"
-            h="14px"
-          />
-          <Text mr={4}>{technology.name}</Text>
-        </Flex>
+    <Flex flexDirection="row" flexWrap="wrap" mt={3}>
+      {technologies.map(({ name, color }: { color: string; name: string }) => (
+        <TechnologyLabel name={name} color={color} />
       ))}
     </Flex>
   </Box>
