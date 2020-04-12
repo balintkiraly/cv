@@ -41,9 +41,8 @@ export const NavBar = (): JSX.Element => {
       alignItems="center"
     >
       <Flex flexDirection="row" justifyContent="center" alignItems="center">
-        <Image src="https://placehold.it/34x34" size={30} />
-        <Text pl={3} color="white">
-          Logo
+        <Text pl={3} color="white" fontWeight="bold">
+          balintkiraly.com
         </Text>
       </Flex>
       <Box>{colorModeButton}</Box>
