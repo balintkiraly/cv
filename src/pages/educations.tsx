@@ -15,7 +15,7 @@ export default function IndexPage({ data }: any): JSX.Element {
           institute={node.childMarkdownRemark.frontmatter.institute}
           startDate={node.childMarkdownRemark.frontmatter.startDate}
           endDate={node.childMarkdownRemark.frontmatter.endDate}
-          description={node.childMarkdownRemark.frontmatter.excerpt}
+          description={node.childMarkdownRemark.excerpt}
         />
       ))}
     </Layout>
