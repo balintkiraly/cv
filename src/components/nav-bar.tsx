@@ -33,7 +33,7 @@ export const NavBar = (): JSX.Element => {
   }
   return (
     <Flex
-      bg="#24292e"
+      bg="gray.900"
       w="100%"
       px={5}
       py={4}
