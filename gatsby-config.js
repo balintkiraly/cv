@@ -29,6 +29,13 @@ module.exports = {
         path: `${__dirname}/src/content/experiences`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `repositories`,
+        path: `${__dirname}/src/content/repositories`,
+      },
+    },
     `gatsby-transformer-remark`,
     'gatsby-plugin-chakra-ui',
     'gatsby-plugin-emotion',

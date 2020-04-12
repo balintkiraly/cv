@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet';
 import { Contact } from './contact';
 import { Container } from './container';
 import { NavBar } from './nav-bar';
+import { TabList } from './tab/tabList';
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -88,6 +89,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
               </Flex>
             </Flex>
             <Box px={[1, 5]} size="100%" pt={[4, 0]}>
+              <TabList />
               {children}
             </Box>
           </Flex>
