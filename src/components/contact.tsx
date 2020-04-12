@@ -32,7 +32,7 @@ export const Contact = ({
       <Box as={FaMapMarkerAlt} size="16px" color="gray.500" mr={1} />
       <Text mt={1}>{location}</Text>
     </Flex>
-    <Text fontWeight="bold" color="gray.800" my={2}>
+    <Text fontWeight="bold" color="gray.600" my={2}>
       Contact
     </Text>
     <Flex justifyContent="space-between">
