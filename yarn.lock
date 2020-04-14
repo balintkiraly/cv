@@ -5856,6 +5856,13 @@ gatsby-plugin-emotion@^4.1.25:
     "@babel/runtime" "^7.8.7"
     "@emotion/babel-preset-css-prop" "^10.0.27"
 
+gatsby-plugin-heap@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-heap/-/gatsby-plugin-heap-1.1.0.tgz#bbb7c9a9784c6897025b7d15a386cbbec04edfcf"
+  integrity sha512-oDx0OT0gtT0D4TG5DKttPd1xlLuMBjP1PNQSryDPvN8hfAySlnmGW/9XjMl6KjUbsWXY6WYMzgw/JKH5UJO3sQ==
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-manifest@^2.2.48:
   version "2.2.48"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.48.tgz#a082addd697a9d7c27ce51f1c08690b8215c8283"
