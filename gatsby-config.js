@@ -38,7 +38,14 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     'gatsby-plugin-chakra-ui',
-    'gatsby-plugin-emotion',
+    'gatsby-plugin-emotion', 
+    {
+      resolve: 'gatsby-plugin-heap',
+      options: {
+        appId: '912595224',
+        enableOnDevMode: true
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
