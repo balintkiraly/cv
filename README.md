@@ -1,37 +1,17 @@
-# ⚛️ gatsby-starter-strict
+# Curriculum Vitae of Balint Kiraly
 
-A Gatsby starter with strict linting and auto-formatting rules.
+This is my CV.
 
-## 🚀 Getting started
+## Setup
 
-- Clone this project and install all the required dependencies _(e.g. with `npx gatsby new gatsby-example-site https://github.com/kripod/gatsby-starter-strict`)_
-- Start a development server with `yarn develop` or `npm run develop`
-  - _Other scripts like `build`, [`format`](#automatic-code-formatting), [`type-check`](#static-type-checking) and [`lint`](#linting) are also available_
+- Clone
 
-### Deploy
+  `git clone git@github.com:balintkiraly/cv.git`
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kripod/gatsby-starter-strict)
+- Install dependencies
 
-## ✨ Developer experience
+  `yarn install`
 
-### Automatic code formatting
+- Start development server
 
-[Prettier][] aims to provide codebase consistency when multiple developers work on the same project. The main reason behind adopting it is to [stop all the on-going debates over coding styles][].
-
-[prettier]: https://prettier.io/
-[stop all the on-going debates over coding styles]: https://prettier.io/docs/en/why-prettier.html
-
-### Static type checking
-
-[TypeScript][] adds optional types to JavaScript, preventing several programming mistakes. For a quick guide about using React with it, please refer to the [React TypeScript Cheatsheet][].
-
-[typescript]: https://www.typescriptlang.org/
-[react typescript cheatsheet]: https://github.com/sw-yx/react-typescript-cheatsheet
-
-### Linting
-
-Source code is linted by [ESLint][], enforcing the [Airbnb JavaScript Style Guide][] through an overridable set of rules provided by [eslint-config-airbnb][].
-
-[eslint]: https://eslint.org/
-[airbnb javascript style guide]: https://github.com/airbnb/javascript
-[eslint-config-airbnb]: https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+  `yarn develop`
