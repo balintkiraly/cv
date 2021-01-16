@@ -37,13 +37,11 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    'gatsby-plugin-chakra-ui',
-    'gatsby-plugin-emotion', 
     {
       resolve: 'gatsby-plugin-heap',
       options: {
         appId: '912595224',
-        enableOnDevMode: true
+        enableOnDevMode: true,
       },
     },
     {
@@ -56,6 +54,14 @@ module.exports = {
         icon: 'src/assets/favicon.png',
         lang: 'en-US',
         start_url: '/',
+      },
+    },
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        isResettingCSS: true,
+        isUsingColorMode: true,
+        portalZIndex: 40,
       },
     },
     'gatsby-plugin-react-helmet',

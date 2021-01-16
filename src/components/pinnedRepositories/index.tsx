@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/core';
+import { SimpleGrid } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 

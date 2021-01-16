@@ -1,4 +1,4 @@
-import { Badge, Flex } from '@chakra-ui/core';
+import { Badge, Flex } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 

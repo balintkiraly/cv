@@ -1,11 +1,5 @@
-import {
-  Box,
-  Flex,
-  IconButton,
-  Image,
-  Text,
-  useColorMode,
-} from '@chakra-ui/core';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { Box, Flex, IconButton, Text, useColorMode } from '@chakra-ui/react';
 import React from 'react';
 
 export const NavBar = (): JSX.Element => {
@@ -14,7 +8,7 @@ export const NavBar = (): JSX.Element => {
   if (colorMode === 'light') {
     colorModeButton = (
       <IconButton
-        icon="moon"
+        icon={<MoonIcon />}
         variantColor="white"
         onClick={toggleColorMode}
         aria-label="Switch to dark mode"
@@ -23,7 +17,7 @@ export const NavBar = (): JSX.Element => {
   } else {
     colorModeButton = (
       <IconButton
-        icon="sun"
+        icon={<SunIcon />}
         variant="ghost"
         variantColor="white"
         onClick={toggleColorMode}

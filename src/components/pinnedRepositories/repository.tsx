@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text } from '@chakra-ui/core';
+import { Box, Flex, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import { GoRepo } from 'react-icons/go';
 
