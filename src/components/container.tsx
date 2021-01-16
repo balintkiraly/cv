@@ -1,4 +1,4 @@
-import { Flex, FlexProps } from '@chakra-ui/core';
+import { Flex, FlexProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 
 type ContainerProps = FlexProps & {

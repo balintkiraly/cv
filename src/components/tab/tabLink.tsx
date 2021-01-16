@@ -1,4 +1,4 @@
-import { Flex, Link as ChakraLink } from '@chakra-ui/core';
+import { Flex, Link as ChakraLink } from '@chakra-ui/react';
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
 
