@@ -53,7 +53,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         <Flex flexDirection={['column', 'column', 'row']}>
           <Flex flexDirection={['column', 'row', 'column']} pr={[0, 6]}>
             <Image
-              src="https://avatars2.githubusercontent.com/u/3306242?s=460&u=022fffa2f9b9c77b23506c3a5f92bccf6e8d6ac3&v=4"
+              src="/avatar.jpeg"
               borderRadius={4}
               objectFit="cover"
               w="100%"

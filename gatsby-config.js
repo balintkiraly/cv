@@ -1,7 +1,6 @@
 const siteMetadata = {
-  name: 'Gatsby Strict ',
-  description:
-    'Demo for a Gatsby starter with strict linting and auto-formatting rules.',
+  name: 'balintkiraly.com',
+  description: 'Curriculum Vitae of Balint Kiraly',
   contact: {
     email: 'balint.kiraly@protonmail.com',
     github: 'balintkiraly',
