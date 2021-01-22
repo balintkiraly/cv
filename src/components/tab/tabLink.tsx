@@ -1,4 +1,4 @@
-import { Flex, Link as ChakraLink } from '@chakra-ui/react';
+import { Flex, Link as ChakraLink, useColorModeValue } from '@chakra-ui/react';
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
 
@@ -9,15 +9,15 @@ interface TabLinkProps {
 export const TabLink = ({ to, children }: TabLinkProps): JSX.Element => (
   <ChakraLink
     fontSize="sm"
-    color="gray.600"
+    color={useColorModeValue('gray.600', 'gray.400')}
     as="div"
     py={2}
     mr={3}
     borderBottom="2px"
-    borderColor="white"
+    borderColor="transparent"
     _hover={{
       textDecoration: 'none',
-      borderBottom: '2px lightgray solid',
+      borderBottom: '2px gray solid',
       boxSizing: 'border-box',
     }}
   >

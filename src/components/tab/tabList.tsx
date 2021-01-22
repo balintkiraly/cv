@@ -1,4 +1,4 @@
-import { Badge, Flex } from '@chakra-ui/react';
+import { Badge, Flex, useColorModeValue } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
@@ -38,19 +38,27 @@ export const TabList = (): JSX.Element => {
     <Flex
       w="100%"
       borderBottom="1px"
-      borderBottomColor="gray.300"
+      borderBottomColor={useColorModeValue('gray.300', 'gray.600')}
       alignItems="center"
     >
       <TabLink to="/">Overview</TabLink>
       <TabLink to="/educations">
         Educations
-        <Badge rounded={5} color="gray.600" m={1}>
+        <Badge
+          rounded={5}
+          color={useColorModeValue('gray.600', 'gray.400')}
+          m={1}
+        >
           {data.educations.edges.length}
         </Badge>
       </TabLink>
       <TabLink to="/experiences">
         Experiences
-        <Badge rounded={5} color="gray.600" m={1}>
+        <Badge
+          rounded={5}
+          color={useColorModeValue('gray.600', 'gray.400')}
+          m={1}
+        >
           {data.experiences.edges.length}
         </Badge>
       </TabLink>
