@@ -29,6 +29,10 @@ export const query = graphql`
         internal: { mediaType: { eq: "text/markdown" } }
         sourceInstanceName: { eq: "educations" }
       }
+      sort: {
+        fields: childMarkdownRemark___frontmatter___startDate
+        order: DESC
+      }
     ) {
       edges {
         node {

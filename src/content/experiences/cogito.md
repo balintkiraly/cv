@@ -1,7 +1,7 @@
 ---
 title: 'Cogito technologies Kft.'
 startDate: '2019-02-20'
-endDate: ''
+endDate: '2020-03-20'
 technologies:
   [
     { name: 'TypeScript', color: 'blue.500' },
