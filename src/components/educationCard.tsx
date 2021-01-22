@@ -1,4 +1,4 @@
-import { Box, BoxProps, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 
 import { DataRange } from './dataRange';
@@ -19,14 +19,24 @@ export const EducationCard = ({
   endDate,
   ...props
 }: EducationCardProps): JSX.Element => (
-  <Box borderBottomWidth="1px" borderBottomColor="gray.200" py={4} {...props}>
+  <Box
+    borderBottomWidth="1px"
+    borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+    py={4}
+    {...props}
+  >
     <Text fontSize="xl" color="blue.500" fontWeight="bold">
       {title}
     </Text>
-    <Text fontSize="md" color="gray.500" fontWeight="bolder" pb={2}>
+    <Text
+      fontSize="md"
+      color={useColorModeValue('gray.500', 'gray.300')}
+      fontWeight="bolder"
+      pb={2}
+    >
       {institute}
     </Text>
-    <Text fontSize="xs" color="gray.600">
+    <Text fontSize="xs" color={useColorModeValue('gray.600', 'gray.400')}>
       {description}
     </Text>
     <DataRange startDate={startDate} endDate={endDate} />

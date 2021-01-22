@@ -1,4 +1,11 @@
-import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
@@ -32,7 +39,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
   `);
 
   return (
-    <React.StrictMode>
+    <Box bg={useColorModeValue('white', 'gray.900')}>
       <Helmet
         titleTemplate={`%s - ${data.site.siteMetadata.name}`}
         defaultTitle={data.site.siteMetadata.name}
@@ -59,12 +66,12 @@ export function Layout({ children }: LayoutProps): JSX.Element {
               <Text pt={[0, 0, 4]} fontSize="3xl">
                 Bálint Király
               </Text>
-              <Text color="gray.500" pb={4}>
+              <Text color={useColorModeValue('gray.500', 'gray.400')} pb={4}>
                 {data.site.siteMetadata.contact.email}
               </Text>
               <Button
                 border="1px"
-                borderColor="gray.300"
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
                 size="sm"
                 my={2}
                 as="a"
@@ -83,6 +90,6 @@ export function Layout({ children }: LayoutProps): JSX.Element {
       </Container>
 
       <footer>{/* TODO */}</footer>
-    </React.StrictMode>
+    </Box>
   );
 }
