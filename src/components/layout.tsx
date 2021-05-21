@@ -45,6 +45,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         titleTemplate={`%s - ${data.site.siteMetadata.name}`}
         defaultTitle={data.site.siteMetadata.name}
       >
+        <meta property="og:image" content="/avatar.jpeg" />
         <meta name="description" content={data.site.siteMetadata.description} />
       </Helmet>
 

@@ -35,6 +35,9 @@ export const NavBar = (): JSX.Element => {
       alignItems="center"
     >
       <Flex flexDirection="row" justifyContent="center" alignItems="center">
+        <Text color="white" fontSize="xl">
+          BK
+        </Text>
         <Text pl={3} color="white" fontWeight="bold">
           balintkiraly.com
         </Text>
