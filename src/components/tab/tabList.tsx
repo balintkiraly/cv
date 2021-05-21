@@ -1,6 +1,7 @@
-import { Badge, Flex, useColorModeValue } from '@chakra-ui/react';
+import { Badge, Box, Flex, useColorModeValue } from '@chakra-ui/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { BiBookOpen, BiBuilding, BiHome, BiPen } from 'react-icons/bi';
 
 import { TabLink } from './tabLink';
 
@@ -41,8 +42,22 @@ export const TabList = (): JSX.Element => {
       borderBottomColor={useColorModeValue('gray.300', 'gray.600')}
       alignItems="center"
     >
-      <TabLink to="/">Overview</TabLink>
+      <TabLink to="/">
+        <Box
+          as={BiHome}
+          size="16px"
+          color={useColorModeValue('gray.600', 'gray.400')}
+          mr={2}
+        />
+        Overview
+      </TabLink>
       <TabLink to="/educations">
+        <Box
+          as={BiBookOpen}
+          size="16px"
+          color={useColorModeValue('gray.600', 'gray.400')}
+          mr={2}
+        />
         Educations
         <Badge
           rounded={5}
@@ -53,6 +68,12 @@ export const TabList = (): JSX.Element => {
         </Badge>
       </TabLink>
       <TabLink to="/experiences">
+        <Box
+          as={BiBuilding}
+          size="16px"
+          color={useColorModeValue('gray.600', 'gray.400')}
+          mr={2}
+        />
         Experiences
         <Badge
           rounded={5}
@@ -61,6 +82,15 @@ export const TabList = (): JSX.Element => {
         >
           {data.experiences.edges.length}
         </Badge>
+      </TabLink>
+      <TabLink to="//blog.balintkiraly.com">
+        <Box
+          as={BiPen}
+          size="16px"
+          color={useColorModeValue('gray.600', 'gray.400')}
+          mr={2}
+        />
+        Blog
       </TabLink>
     </Flex>
   );
