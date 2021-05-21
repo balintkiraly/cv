@@ -3,6 +3,7 @@ import {
   Button,
   Flex,
   Image,
+  Link,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -44,6 +45,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
         titleTemplate={`%s - ${data.site.siteMetadata.name}`}
         defaultTitle={data.site.siteMetadata.name}
       >
+        <meta property="og:image" content="/avatar.jpeg" />
         <meta name="description" content={data.site.siteMetadata.description} />
       </Helmet>
 
@@ -51,14 +53,20 @@ export function Layout({ children }: LayoutProps): JSX.Element {
 
       <Container>
         <Flex flexDirection={['column', 'column', 'row']}>
-          <Flex flexDirection={['column', 'row', 'column']} pr={[0, 6]}>
+          <Flex
+            flexDirection={['column', 'row', 'column']}
+            pr={[0, 6]}
+            maxW="100%"
+            pb={[0, 6, 0]}
+          >
             <Image
               src="/avatar.jpeg"
               borderRadius={4}
               objectFit="cover"
-              w="100%"
+              maxW={['100%', '50%', '100%']}
             />
             <Flex
+              flex={1}
               flexDirection="column"
               alignItems="justifyContent"
               px={[2, 2, 0]}
@@ -67,7 +75,12 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                 Bálint Király
               </Text>
               <Text color={useColorModeValue('gray.500', 'gray.400')} pb={4}>
-                {data.site.siteMetadata.contact.email}
+                <Link
+                  href={`mailto:${data.site.siteMetadata.contact.email}`}
+                  isExternal
+                >
+                  {data.site.siteMetadata.contact.email}
+                </Link>
               </Text>
               <Button
                 border="1px"
