@@ -3,6 +3,7 @@ import {
   Button,
   Flex,
   Image,
+  Link,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -73,7 +74,12 @@ export function Layout({ children }: LayoutProps): JSX.Element {
                 Bálint Király
               </Text>
               <Text color={useColorModeValue('gray.500', 'gray.400')} pb={4}>
-                {data.site.siteMetadata.contact.email}
+                <Link
+                  href={`mailto:${data.site.siteMetadata.contact.email}`}
+                  isExternal
+                >
+                  {data.site.siteMetadata.contact.email}
+                </Link>
               </Text>
               <Button
                 border="1px"
