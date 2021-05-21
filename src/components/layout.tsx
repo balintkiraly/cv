@@ -51,14 +51,20 @@ export function Layout({ children }: LayoutProps): JSX.Element {
 
       <Container>
         <Flex flexDirection={['column', 'column', 'row']}>
-          <Flex flexDirection={['column', 'row', 'column']} pr={[0, 6]}>
+          <Flex
+            flexDirection={['column', 'row', 'column']}
+            pr={[0, 6]}
+            maxW="100%"
+            pb={[0, 6, 0]}
+          >
             <Image
               src="/avatar.jpeg"
               borderRadius={4}
               objectFit="cover"
-              w="100%"
+              maxW={['100%', '50%', '100%']}
             />
             <Flex
+              flex={1}
               flexDirection="column"
               alignItems="justifyContent"
               px={[2, 2, 0]}
