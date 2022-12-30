@@ -2,7 +2,6 @@ import { Box, Flex, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import {
   FaEnvelopeSquare,
-  FaFacebookSquare,
   FaGithubSquare,
   FaLinkedin,
   FaMapMarkerAlt,
@@ -12,12 +11,10 @@ interface ContactProps {
   linkedin: string;
   github: string;
   email: string;
-  facebook: string;
   location: string;
 }
 export const Contact = ({
   linkedin,
-  facebook,
   github,
   email,
   location,
@@ -47,9 +44,6 @@ export const Contact = ({
         </Link>
         <Link href={`https://github.com/${github}`} isExternal>
           <Box as={FaGithubSquare} size="32px" color={iconColor} mx={3} />
-        </Link>
-        <Link href={`https://facebook.com/${facebook}`} isExternal>
-          <Box as={FaFacebookSquare} size="32px" color={iconColor} mx={3} />
         </Link>
         <Link href={`mailto:${email}`} isExternal>
           <Box as={FaEnvelopeSquare} size="32px" color={iconColor} mx={3} />
