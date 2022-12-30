@@ -83,15 +83,6 @@ export const TabList = (): JSX.Element => {
           {data.experiences.edges.length}
         </Badge>
       </TabLink>
-      <TabLink to="//blog.balintkiraly.com">
-        <Box
-          as={BiPen}
-          size="16px"
-          color={useColorModeValue('gray.600', 'gray.400')}
-          mr={2}
-        />
-        Blog
-      </TabLink>
     </Flex>
   );
 };

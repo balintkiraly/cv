@@ -12,7 +12,7 @@ export const DataRange = ({
   const textColor = useColorModeValue('gray.600', 'gray.500');
 
   return (
-    <Text fontSize="xs" pt={1} color={textColor}>
+    <Text fontSize="xs" pb={1} color={textColor}>
       {startDate !== 'Invalid date' && startDate} -{' '}
       {(endDate !== 'Invalid date' && endDate) || 'Present'}
     </Text>
