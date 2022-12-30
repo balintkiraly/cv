@@ -5,7 +5,6 @@ const siteMetadata = {
     email: 'balint.kiraly@protonmail.com',
     github: 'balintkiraly',
     linkedin: 'kiralybalint',
-    facebook: 'balintkiralyfb',
     location: 'Budapest, Hungary',
   },
 };

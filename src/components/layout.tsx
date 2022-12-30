@@ -31,7 +31,6 @@ export function Layout({ children }: LayoutProps): JSX.Element {
             email
             github
             linkedin
-            facebook
             location
           }
         }
