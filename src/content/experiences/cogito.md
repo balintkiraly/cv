@@ -1,7 +1,14 @@
 ---
 title: 'Cogito technologies Kft.'
 startDate: '2019-02-20'
-endDate: '2020-03-20'
+positions:
+  [
+    {
+      name: 'Full Stack Engineer',
+      startDate: '2019-02-20',
+      endDate: '2020-03-20',
+    },
+  ]
 technologies:
   [
     { name: 'TypeScript', color: 'blue.500' },
@@ -13,5 +20,3 @@ technologies:
     { name: 'GCP', color: 'red.500' },
   ]
 ---
-
-Full Stack Engineer

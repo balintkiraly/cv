@@ -2,6 +2,14 @@
 title: 'BetVictor'
 startDate: '2020-07-13'
 endDate: '2021-06-12'
+positions:
+  [
+    {
+      name: 'Web Software Engineer',
+      startDate: '2020-07-13',
+      endDate: '2021-06-12',
+    },
+  ]
 technologies:
   [
     { name: 'TypeScript', color: 'blue.500' },
@@ -12,5 +20,3 @@ technologies:
     { name: 'Ruby on Rails', color: 'red.600' },
   ]
 ---
-
-Web Software Engineer

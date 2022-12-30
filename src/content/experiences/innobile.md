@@ -1,7 +1,8 @@
 ---
 title: 'Innobile Informatikai Kft.'
 startDate: '2017-03-06'
-endDate: '2018-11-30'
+positions:
+  [{ name: 'PHP Developer', startDate: '2017-03-06', endDate: '2018-11-30' }]
 technologies:
   [
     { name: 'PHP', color: 'purple.700' },
@@ -10,5 +11,3 @@ technologies:
     { name: 'REST API', color: 'teal.700' },
   ]
 ---
-
-PHP Developer

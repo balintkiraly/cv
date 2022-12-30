@@ -12,10 +12,8 @@ export default function IndexPage({ data }: any): JSX.Element {
         <ExperiencCard
           key={node.id}
           title={node.childMarkdownRemark.frontmatter.title}
-          description={node.childMarkdownRemark.excerpt}
-          startDate={node.childMarkdownRemark.frontmatter.startDate}
-          endDate={node.childMarkdownRemark.frontmatter.endDate}
           technologies={node.childMarkdownRemark.frontmatter.technologies}
+          postions={node.childMarkdownRemark.frontmatter.positions}
         />
       ))}
     </Layout>
@@ -41,10 +39,15 @@ export const query = graphql`
             frontmatter {
               title
               startDate(formatString: "DD MMMM, YYYY")
-              endDate(formatString: "DD MMMM, YYYY")
               technologies {
                 name
                 color
+              }
+              positions {
+                name
+                startDate(formatString: "MMM YYYY")
+                endDate(formatString: "MMM YYYY")
+                description
               }
             }
             excerpt
